@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Edvoli Privacy Policy</title>
+  <style>
+* { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: #111;
+      background: #f4f4f2;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 20px 72px;
+      background: #fff;
+    }
+    h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 0.75rem; }
+    h2 { font-size: 1.15rem; margin: 1.75rem 0 0.5rem; }
+    p, li { margin: 0 0 0.75rem; }
+    ul { padding-left: 1.2rem; }
+    a { color: #0d6e3f; }
+  </style>
+</head>
+<body>
+  <main>
+<h1>Edvoli Privacy Policy</h1>
+  <p>Effective: September 26, 2026.</p>
+  <p>Edvoli (âweâ) operates the Edvoli mobile app for adult learners of American English. This Privacy Policy describes what this app actually collects, why, and which processors we use. It is not a generic template.</p>
+  <p>Navigation, glosses, and scaffolding may appear in Haitian Creole, Spanish, or French. The language you practice is American English.</p>
+
+  <h2>1. Information we collect</h2>
+  <p><strong>Account and contact info:</strong> email address and authentication identifiers when you sign in with email/password, Sign in with Apple, or Google.</p>
+  <p><strong>Identifiers:</strong> a user ID assigned by Supabase Auth so lesson progress and subscription status stay attached to your account.</p>
+  <p><strong>On-device data:</strong> limited local data in device storage (for example session tokens via secure storage and a local subscription display cache). This stays on the device unless you back up the device.</p>
+  <p><strong>User content:</strong> if you use speaking practice, short voice recordings captured only while that module is active.</p>
+  <p><strong>Usage data:</strong> lesson progress, module completion, and daily speaking-quota counts so the app can resume lessons and apply fair-use limits.</p>
+  <p><strong>Purchases:</strong> subscription tier and expiry needed to enforce entitlements. We do not receive or store full payment card numbers.</p>
+
+  <h2>2. Processors we use</h2>
+  <ul>
+    <li><strong>Supabase:</strong> account authentication (Auth), database storage of your profile and progress, and file storage for product content. Hosting for this project is in the United States.</li>
+    <li><strong>Apple:</strong> Sign in with Apple (if you choose it), App Store In-App Purchases / StoreKit, and optional device security (Face ID / Keychain).</li>
+    <li><strong>Google:</strong> Google sign-in (if you choose it) and Google Play Billing for Android subscriptions.</li>
+    <li><strong>RevenueCat:</strong> subscription entitlement sync from Apple App Store and Google Play; a webhook updates your server-side subscription tier in Supabase. RevenueCat and the stores process the transaction; Edvoli does not store card numbers.</li>
+    <li><strong>OpenAI:</strong> speech transcription (Whisper) and pronunciation scoring when you use Speak and those services are available.</li>
+  </ul>
+  <p>We do not include Sentry, PostHog, Firebase Analytics, Amplitude, Mixpanel, or App Tracking Transparency advertising SDKs in this binary. Production builds do not send analytics to those services. Device logs stay on the device unless you share them with support.</p>
+
+  <h2>3. Microphone and speech scoring</h2>
+  <p>The App requests microphone access only when you start an interactive speaking / pronunciation-scoring step (the speaking practice step in a lesson). We do not turn the microphone on in the background, and we do not use it for surveillance.</p>
+  <ul>
+    <li>Speech audio is captured on-device for that active session and sent to our score-speech API so we can evaluate pronunciation and, when Premium scoring is available, transcribe via OpenAI.</li>
+    <li>Edvoli does not sell your voice recordings. We do not permanently store lesson speech clips in Supabase Storage. Audio is processed ephemerally to return a score and optional transcript, then discarded on our servers after the request completes. OpenAI processes audio under its own terms when Whisper is used.</li>
+    <li>You may decline microphone permission and continue using non-speaking features (listen, vocabulary, reading, and similar).</li>
+  </ul>
+
+  <h2>4. What we do not collect</h2>
+  <ul>
+    <li>We do not collect government-issued IDs, passports, visas, immigration status, A-numbers, or legal case documents.</li>
+    <li>We do not request GPS location. A profile may store an optional region field used only for access rules; it is not used for ads and is not a substitute for immigration records.</li>
+    <li>We do not show third-party ads or share personal data with data brokers.</li>
+    <li>We do not grant Premium because the client app wrote a flag on your profile. Paid access comes from Apple or Google Play (via RevenueCat) or an ops-managed TestFlight arrangement.</li>
+  </ul>
+  <p>Lesson dialogues, translations, and curriculum audio are Edvoli product content, not your personal data.</p>
+
+  <h2>5. Account deletion and retention</h2>
+  <p>You may delete your account in the App at <strong>Settings &gt; Delete Account</strong>.</p>
+  <p>When deletion succeeds, we remove your Supabase Auth user and associated personal rows we control (profile, lesson progress, support tickets, and similar account data). Shared curriculum (published lessons, audio, translations) is not deleted.</p>
+  <p>Apple, Google, and RevenueCat may retain transaction identifiers, receipts, and subscription records as required to operate the stores and prevent fraud. Edvoli cannot erase those store records.</p>
+  <p><strong>Deleting your Edvoli account or deleting the App from your device does not cancel an active subscription.</strong> You must cancel auto-renewal in your Apple ID or Google Play account settings to stop recurring billing.</p>
+
+  <h2>6. Children</h2>
+  <p>Edvoli is designed for adults. You must be at least 13 years old to create an account. We do not knowingly collect personal information from children under 13 (COPPA). If you believe a child under 13 has created an account, contact us and we will delete it.</p>
+
+  <h2>7. Selling and tracking</h2>
+  <p>We do not sell personal data. This app does not use App Tracking Transparency tracking SDKs for cross-app advertising.</p>
+
+  <h2>8. Contact</h2>
+  <p>Privacy questions: <a href="mailto:contact@edvoli.com">contact@edvoli.com</a></p>
+  </main>
+</body>
+</html>
